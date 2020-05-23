@@ -14,7 +14,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "C:\\Users\\erict\\OneDrive\\Documentos\\GDevelop projects\\The Golden Carrot\\The Golden Carrot.json",
+    "projectFile": "G:\\RepositorioGit\\Golden-Carrot\\The Golden Carrot\\The Golden Carrot.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -4079,6 +4079,122 @@
         "name": "The Golden Carrot logo.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Camada 2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Camada 2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Camada 4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Camada 4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Camada1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Camada1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Camada3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Camada3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Sombra1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sombra1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Sombra2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sombra2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Sombra3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sombra3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Sombra4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sombra4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Seagram tfb.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Seagram tfb.ttf",
+        "userAdded": true
+      },
+      {
+        "file": "120 Mortvia Fountain.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "120 Mortvia Fountain.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "109 Baljhet Mountains.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "109 Baljhet Mountains.mp3",
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "atack.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "atack.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "Lobo (Notificação).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Lobo (Notificação).mp3",
+        "userAdded": false
+      },
+      {
+        "file": "Lobo SMS.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Lobo SMS.mp3",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -4620,7 +4736,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Attack-1.png",
+                  "image": "atack.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9438,6 +9554,219 @@
       }
     },
     {
+      "name": "Boss",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Direction",
+          "value": "0"
+        },
+        {
+          "name": "Death",
+          "value": "1"
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "acceleration": 1500,
+          "canGrabPlatforms": false,
+          "deceleration": 1500,
+          "gravity": 1000,
+          "ignoreDefaultControls": true,
+          "jumpSpeed": 600,
+          "maxFallingSpeed": 700,
+          "maxSpeed": 150,
+          "roundCoordinates": true,
+          "slopeMaxAngle": 60,
+          "xGrabTolerance": 10,
+          "yGrabOffset": 0
+        }
+      ],
+      "animations": [
+        {
+          "name": "Walk01",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Walk01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Walk02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Walk03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Walk04.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Walk05.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Walk06.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.05,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Die01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Die02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Die03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Enemy",
       "tags": "",
       "type": "Sprite",
@@ -10203,7 +10532,12 @@
         "zoomFactor": 1
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "fasesalva",
+          "value": ""
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -10213,8 +10547,8 @@
           "locked": false,
           "name": "StartGame",
           "width": 0,
-          "x": 315,
-          "y": 339,
+          "x": 317,
+          "y": 238,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -10228,7 +10562,7 @@
           "locked": false,
           "name": "Exit",
           "width": 0,
-          "x": 438,
+          "x": 415,
           "y": 550,
           "zOrder": 2,
           "numberProperties": [],
@@ -10243,15 +10577,49 @@
           "locked": false,
           "name": "Title",
           "width": 0,
-          "x": 223,
-          "y": 50,
+          "x": 210,
+          "y": 115,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Continua",
+          "width": 0,
+          "x": 330,
+          "y": 306,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         }
       ],
       "objects": [
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Continua",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Continuar",
+          "font": "Seagram tfb.ttf",
+          "characterSize": 40,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
         {
           "bold": false,
           "italic": false,
@@ -10262,8 +10630,8 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Start Game",
-          "font": "Plataforma_sprites\\fonts\\Blackwood Castle.ttf",
+          "string": "Novo Jogo",
+          "font": "Seagram tfb.ttf",
           "characterSize": 40,
           "color": {
             "b": 255,
@@ -10282,7 +10650,7 @@
           "variables": [],
           "behaviors": [],
           "string": "Aperte a tecla \"Esc\" para sair",
-          "font": "Plataforma_sprites\\fonts\\Blackwood Castle.ttf",
+          "font": "Seagram tfb.ttf",
           "characterSize": 30,
           "color": {
             "b": 255,
@@ -10301,7 +10669,7 @@
           "variables": [],
           "behaviors": [],
           "string": "The Golden Carrot",
-          "font": "Plataforma_sprites\\fonts\\Blackwood Castle.ttf",
+          "font": "Seagram tfb.ttf",
           "characterSize": 50,
           "color": {
             "b": 8,
@@ -10505,6 +10873,237 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Ler o storage",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "LireFichierExp"
+              },
+              "parameters": [
+                "\"save\"",
+                "\"fase\"",
+                "",
+                "fasesalva"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Continua",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisBouton"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Continua",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "fasesalva",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PushScene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Stage 01\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "fasesalva",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PushScene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Stage 02\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Continua",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::ChangeColor"
+              },
+              "parameters": [
+                "Continua",
+                "\"248;231;28\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Continua",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::ChangeColor"
+              },
+              "parameters": [
+                "Continua",
+                "\"255;255;255\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
@@ -10561,7 +11160,7 @@
         "gridWidth": 32,
         "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.394
+        "zoomFactor": 0.154
       },
       "objectsGroups": [
         {
@@ -10951,21 +11550,6 @@
           "x": 5,
           "y": 70,
           "zOrder": 100,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 125,
-          "layer": "Game",
-          "locked": false,
-          "name": "Enemy",
-          "width": 142,
-          "x": 7051,
-          "y": -140,
-          "zOrder": 99,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -12458,20 +13042,211 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 366,
+          "height": 278,
           "layer": "Game",
           "locked": false,
-          "name": "Neister_Egg",
-          "width": 316,
-          "x": 7485,
-          "y": -380,
-          "zOrder": 0,
+          "name": "Portal",
+          "width": 167,
+          "x": 7622,
+          "y": -328,
+          "zOrder": 104,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 173,
+          "layer": "",
+          "locked": false,
+          "name": "Boss",
+          "width": 219,
+          "x": 6981,
+          "y": -184,
+          "zOrder": 105,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Variable",
+              "value": ""
+            }
+          ]
         }
       ],
-      "objects": [],
+      "objects": [
+        {
+          "name": "Portal",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "portal",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.1667,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Camada 2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Camada1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Camada3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Camada 4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "sombra",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.1667,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Sombra1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Sombra2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Sombra3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Sombra4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "events": [
         {
           "disabled": false,
@@ -12612,7 +13387,7 @@
               },
               "parameters": [
                 "",
-                "04.mp3",
+                "120 Mortvia Fountain.mp3",
                 "2",
                 "yes",
                 "100",
@@ -12790,7 +13565,7 @@
               },
               "parameters": [
                 "Rabbit",
-                "Neister_Egg",
+                "Portal",
                 "",
                 "",
                 ""
@@ -12974,6 +13749,76 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Boss",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Salvar o numero da fase",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"save\"",
+                "\"fase\"",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
@@ -13067,8 +13912,8 @@
           "locked": false,
           "name": "Restart",
           "width": 0,
-          "x": 226,
-          "y": 118,
+          "x": 270,
+          "y": 175,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -13082,8 +13927,8 @@
           "locked": false,
           "name": "Exit",
           "width": 0,
-          "x": 272,
-          "y": 221,
+          "x": 334,
+          "y": 281,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -13102,7 +13947,7 @@
           "variables": [],
           "behaviors": [],
           "string": "RESTART",
-          "font": "Plataforma_sprites\\fonts\\Blackwood Castle.ttf",
+          "font": "Seagram tfb.ttf",
           "characterSize": 40,
           "color": {
             "b": 255,
@@ -13121,7 +13966,7 @@
           "variables": [],
           "behaviors": [],
           "string": "EXIT",
-          "font": "Plataforma_sprites\\fonts\\Blackwood Castle.ttf",
+          "font": "Seagram tfb.ttf",
           "characterSize": 40,
           "color": {
             "b": 0,
@@ -13276,7 +14121,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.97
+        "zoomFactor": 0.634
       },
       "objectsGroups": [],
       "variables": [],
@@ -13814,7 +14659,7 @@
           "locked": false,
           "name": "plataform1",
           "width": 0,
-          "x": 1278,
+          "x": 1558,
           "y": 228,
           "zOrder": 0,
           "numberProperties": [],
@@ -13824,13 +14669,13 @@
         {
           "angle": 90,
           "customSize": true,
-          "height": 160,
+          "height": 445,
           "layer": "Game",
           "locked": false,
           "name": "groundorwall1",
           "width": 32,
-          "x": 1185,
-          "y": 164,
+          "x": 1326,
+          "y": 21,
           "zOrder": 0,
           "numberProperties": [],
           "stringProperties": [],
@@ -13933,7 +14778,7 @@
           "layer": "",
           "locked": false,
           "name": "Kill_Zone",
-          "width": 1575,
+          "width": 1772,
           "x": 0,
           "y": 565,
           "zOrder": 0,
@@ -13997,6 +14842,156 @@
           "x": 509,
           "y": 202,
           "zOrder": 98,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 35,
+          "layer": "",
+          "locked": false,
+          "name": "ground2",
+          "width": 34,
+          "x": 1667,
+          "y": 379,
+          "zOrder": 101,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 431,
+          "layer": "",
+          "locked": false,
+          "name": "wall1",
+          "width": 34,
+          "x": 1667,
+          "y": 412,
+          "zOrder": 102,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 417,
+          "layer": "",
+          "locked": false,
+          "name": "ground0",
+          "width": 551,
+          "x": 1698,
+          "y": 411,
+          "zOrder": 103,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "ground1",
+          "width": 552,
+          "x": 1696,
+          "y": 379,
+          "zOrder": 104,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 34,
+          "layer": "",
+          "locked": false,
+          "name": "ground2",
+          "width": 32,
+          "x": 2248,
+          "y": 294,
+          "zOrder": 105,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 57,
+          "layer": "",
+          "locked": false,
+          "name": "plataform2",
+          "width": 32,
+          "x": 2249,
+          "y": 326,
+          "zOrder": 106,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 181.14,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "ground2",
+          "width": 0,
+          "x": 2249,
+          "y": 383,
+          "zOrder": 107,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 49,
+          "layer": "",
+          "locked": false,
+          "name": "grass2",
+          "width": 116,
+          "x": 1761,
+          "y": 328,
+          "zOrder": 108,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 41,
+          "layer": "",
+          "locked": false,
+          "name": "back1",
+          "width": 59,
+          "x": 1911,
+          "y": 336,
+          "zOrder": 109,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 20,
+          "layer": "",
+          "locked": false,
+          "name": "grass1",
+          "width": 15,
+          "x": 2008,
+          "y": 356,
+          "zOrder": 110,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -14143,7 +15138,7 @@
               },
               "parameters": [
                 "",
-                "04.mp3",
+                "109 Baljhet Mountains.mp3",
                 "2",
                 "yes",
                 "100",
@@ -14284,7 +15279,7 @@
               "parameters": [
                 "",
                 "Coin.wav",
-                "",
+                "5\n",
                 "",
                 "",
                 ""
@@ -14339,6 +15334,53 @@
                 "",
                 "\"GameOver\"",
                 ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Salvar a fase",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"save\"",
+                "\"fase\"",
+                "2"
               ],
               "subInstructions": []
             }
@@ -15335,7 +16377,7 @@
       ]
     },
     {
-      "associatedLayout": "Stage01",
+      "associatedLayout": "Stage 01",
       "lastChangeTimeStamp": 0,
       "name": "Enemy Events",
       "events": [
