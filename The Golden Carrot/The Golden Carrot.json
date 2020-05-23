@@ -4151,6 +4151,50 @@
         "name": "Sombra4.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "Seagram tfb.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Seagram tfb.ttf",
+        "userAdded": true
+      },
+      {
+        "file": "120 Mortvia Fountain.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "120 Mortvia Fountain.mp3",
+        "userAdded": true
+      },
+      {
+        "file": "109 Baljhet Mountains.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "109 Baljhet Mountains.mp3",
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "atack.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "atack.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "Lobo (Notificação).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Lobo (Notificação).mp3",
+        "userAdded": false
+      },
+      {
+        "file": "Lobo SMS.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Lobo SMS.mp3",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -4692,7 +4736,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Attack-1.png",
+                  "image": "atack.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -10488,7 +10532,12 @@
         "zoomFactor": 1
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "fasesalva",
+          "value": ""
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -10498,8 +10547,8 @@
           "locked": false,
           "name": "StartGame",
           "width": 0,
-          "x": 315,
-          "y": 339,
+          "x": 317,
+          "y": 238,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -10513,7 +10562,7 @@
           "locked": false,
           "name": "Exit",
           "width": 0,
-          "x": 438,
+          "x": 415,
           "y": 550,
           "zOrder": 2,
           "numberProperties": [],
@@ -10528,15 +10577,49 @@
           "locked": false,
           "name": "Title",
           "width": 0,
-          "x": 223,
-          "y": 50,
+          "x": 210,
+          "y": 115,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Continua",
+          "width": 0,
+          "x": 330,
+          "y": 306,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         }
       ],
       "objects": [
+        {
+          "bold": false,
+          "italic": false,
+          "name": "Continua",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Continuar",
+          "font": "Seagram tfb.ttf",
+          "characterSize": 40,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          }
+        },
         {
           "bold": false,
           "italic": false,
@@ -10547,8 +10630,8 @@
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "Start Game",
-          "font": "Plataforma_sprites\\fonts\\Blackwood Castle.ttf",
+          "string": "Novo Jogo",
+          "font": "Seagram tfb.ttf",
           "characterSize": 40,
           "color": {
             "b": 255,
@@ -10567,7 +10650,7 @@
           "variables": [],
           "behaviors": [],
           "string": "Aperte a tecla \"Esc\" para sair",
-          "font": "Plataforma_sprites\\fonts\\Blackwood Castle.ttf",
+          "font": "Seagram tfb.ttf",
           "characterSize": 30,
           "color": {
             "b": 255,
@@ -10586,7 +10669,7 @@
           "variables": [],
           "behaviors": [],
           "string": "The Golden Carrot",
-          "font": "Plataforma_sprites\\fonts\\Blackwood Castle.ttf",
+          "font": "Seagram tfb.ttf",
           "characterSize": 50,
           "color": {
             "b": 8,
@@ -10785,6 +10868,237 @@
                 "yes",
                 "100",
                 ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Ler o storage",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "LireFichierExp"
+              },
+              "parameters": [
+                "\"save\"",
+                "\"fase\"",
+                "",
+                "fasesalva"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Continua",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisBouton"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Continua",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "fasesalva",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PushScene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Stage 01\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "fasesalva",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PushScene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Stage 02\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Continua",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::ChangeColor"
+              },
+              "parameters": [
+                "Continua",
+                "\"248;231;28\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Continua",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::ChangeColor"
+              },
+              "parameters": [
+                "Continua",
+                "\"255;255;255\""
               ],
               "subInstructions": []
             }
@@ -13073,7 +13387,7 @@
               },
               "parameters": [
                 "",
-                "04.mp3",
+                "120 Mortvia Fountain.mp3",
                 "2",
                 "yes",
                 "100",
@@ -13458,6 +13772,53 @@
           "conditions": [],
           "actions": [],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Salvar o numero da fase",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"save\"",
+                "\"fase\"",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
@@ -13551,8 +13912,8 @@
           "locked": false,
           "name": "Restart",
           "width": 0,
-          "x": 226,
-          "y": 118,
+          "x": 270,
+          "y": 175,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -13566,8 +13927,8 @@
           "locked": false,
           "name": "Exit",
           "width": 0,
-          "x": 272,
-          "y": 221,
+          "x": 334,
+          "y": 281,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -13586,7 +13947,7 @@
           "variables": [],
           "behaviors": [],
           "string": "RESTART",
-          "font": "Plataforma_sprites\\fonts\\Blackwood Castle.ttf",
+          "font": "Seagram tfb.ttf",
           "characterSize": 40,
           "color": {
             "b": 255,
@@ -13605,7 +13966,7 @@
           "variables": [],
           "behaviors": [],
           "string": "EXIT",
-          "font": "Plataforma_sprites\\fonts\\Blackwood Castle.ttf",
+          "font": "Seagram tfb.ttf",
           "characterSize": 40,
           "color": {
             "b": 0,
@@ -13760,7 +14121,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.658
+        "zoomFactor": 0.634
       },
       "objectsGroups": [],
       "variables": [],
@@ -14777,7 +15138,7 @@
               },
               "parameters": [
                 "",
-                "04.mp3",
+                "109 Baljhet Mountains.mp3",
                 "2",
                 "yes",
                 "100",
@@ -14973,6 +15334,53 @@
                 "",
                 "\"GameOver\"",
                 ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Salvar a fase",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"save\"",
+                "\"fase\"",
+                "2"
               ],
               "subInstructions": []
             }
