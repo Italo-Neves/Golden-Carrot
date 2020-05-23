@@ -10548,7 +10548,7 @@
           "name": "StartGame",
           "width": 0,
           "x": 317,
-          "y": 238,
+          "y": 239,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -10592,8 +10592,8 @@
           "locked": false,
           "name": "Continua",
           "width": 0,
-          "x": 330,
-          "y": 306,
+          "x": 326,
+          "y": 305,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -14121,7 +14121,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.634
+        "zoomFactor": 0.658
       },
       "objectsGroups": [],
       "variables": [],
